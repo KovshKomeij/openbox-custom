@@ -6,7 +6,7 @@ sudo apt update -y
 apt install keyboard-configuration tzdata -y
 apt install sudo wget dialog -y
 apt install libexo-2-0 -y
-sudo apt install openbox obconf tigervnc-standalone-server wget nano dbus-x11 xorg xterm gpicview lxterminal pcmanfm tint2 firefox-esr policykit-1 lxpolkit mousepad lxappearance lxappearance-obconf lxrandr xarchiver lightdm abiword geany tigervnc-common -y
+apt install openbox obconf tigervnc-standalone-server wget nano dbus-x11 xorg xterm gpicview lxterminal pcmanfm tint2 firefox-esr policykit-1 lxpolkit mousepad lxappearance lxappearance-obconf lxrandr xarchiver lightdm abiword geany tigervnc-common -y
 clear
 
 wget https://raw.githubusercontent.com/dibil228of/openbox-custom/main/termux/vncserver-start -O /usr/local/bin/vncserver-start
