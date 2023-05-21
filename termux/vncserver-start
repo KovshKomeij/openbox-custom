@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export USER=user
+export HOME=/home/user
+
+vncserver -name remote-desktop -localhost no :1
