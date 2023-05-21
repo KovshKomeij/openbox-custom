@@ -56,17 +56,18 @@ if [ -n "\$(ls -A debian-binds)" ]; then
 fi
 command+=" -b /dev"
 command+=" -b /proc"
-command+=" -b debian-fs/home/user:/dev/shm"
+command+=" -b debian-fs/root:/dev/shm"
 ## uncomment the following line to have access to the home directory of termux
 #command+=" -b /data/data/com.termux/files/home:/root"
 ## uncomment the following line to mount /sdcard directly to / 
 #command+=" -b /sdcard"
-command+=" -w /home/user"
+command+=" -w /root"
 command+=" /usr/bin/env -i"
-command+=" HOME=/home/user"
+command+=" HOME=/root"
 command+=" PATH=/usr/local/sbin:/usr/local/bin:/bin:/usr/bin:/sbin:/usr/sbin:/usr/games:/usr/local/games"
 command+=" TERM=\$TERM"
 command+=" LANG=C.UTF-8"
+command+=" su -l user"
 command+=" /bin/bash --login"
 com="\$@"
 if [ -z "\$1" ];then
@@ -105,7 +106,7 @@ if [ ! -f /usr/bin/vncserver ]; then
     apt install tigervnc-standalone-server -y
 fi
 clear
-echo ' Welcome to Andronix Debian | Openbox '
+echo ' Welcome to openbox-custom! '
 rm -rf ~/.bash_profile" > $folder/root/.bash_profile 
 
 bash $bin
