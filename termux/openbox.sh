@@ -13,11 +13,11 @@ mkdir /home/user
 
 mkdir -p /home/user/.vnc
 
-echo "#!/bin/bash
+echo "#!/bin/bash"
 [ -r /home/user/.Xresources ] && xrdb /home/user/.Xresources
 export PULSE_SERVER=127.0.0.1
 export DISPLAY=:1
-XAUTHORITY=~/.Xauthority
+XAUTHORITY=/home/user/.Xauthority
 export XAUTHORITY
 dbus-launch openbox
 dbus-launch xrandr -s 1280x720
@@ -28,8 +28,8 @@ chmod +x /home/user/.vnc/xstartup
 
 wget https://raw.githubusercontent.com/dibil228of/openbox-custom/main/termux/vncserver-start -O /usr/local/bin/vncserver-start
 wget https://raw.githubusercontent.com/dibil228of/openbox-custom/main/termux/vncserver-stop -O /usr/local/bin/vncserver-stop
-chmod +x /usr/local/bin/vncserver-start
-chmod +x /usr/local/bin/vncserver-stop
+chmod +x /usr/bin/vncserver-start
+chmod +x /usr/bin/vncserver-stop
 
 echo "You can now start vncserver by running vncserver-start"
 echo ""
